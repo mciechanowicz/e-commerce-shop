@@ -48,7 +48,7 @@
     "max-len": [
       "warn",
       {
-        "code": 80,
+        "code": 100,
         "ignoreStrings": true,
         "ignoreTemplateLiterals": true,
         "ignoreComments": true
@@ -85,6 +85,7 @@
     "no-use-before-define": "off",
     "@typescript-eslint/no-use-before-define": "off",
     "react/jsx-uses-react": "off",
-    "react/react-in-jsx-scope": "off"
+    "react/react-in-jsx-scope": "off",
+    "react/self-closing-comp": "warn"
   }
 }
