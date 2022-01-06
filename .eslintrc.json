@@ -81,6 +81,10 @@
     "react/jsx-one-expression-per-line": "off",
     "react/jsx-wrap-multilines": "off",
     "react/destructuring-assignment": "off",
-    "react/function-component-definition": [1, { "namedComponents": "arrow-function" }]
+    "react/function-component-definition": [1, { "namedComponents": "arrow-function" }],
+    "no-use-before-define": "off",
+    "@typescript-eslint/no-use-before-define": "off",
+    "react/jsx-uses-react": "off",
+    "react/react-in-jsx-scope": "off"
   }
 }
