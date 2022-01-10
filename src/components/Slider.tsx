@@ -5,6 +5,7 @@ import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos'
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos'
 
 import { sliderData } from '../data'
+import { DeviceSizes, responsive } from '../responsive'
 
 export const Slider = () => {
   const [sliderIndex, setSliderIndex] = useState<number>(0)
@@ -65,8 +66,6 @@ const Arrow = styled.div<ArrowProps>`
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background-color: #f1f1f1;
-  opacity: 0.7;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -76,9 +75,19 @@ const Arrow = styled.div<ArrowProps>`
   left: ${({ position }) => position === 'left' && 15}px;
   right: ${({ position }) => position === 'right' && 15}px;
   &:hover {
-    opacity: 0.8;
-    background-color: #ebebeb;
+    opacity: 0.4;
+    background-color: #f1f1f1;
   }
+  ${responsive(
+    {
+      bottom: '20%',
+      margin: 'auto',
+      width: '35px',
+      height: '35px',
+      top: '100%',
+    },
+    DeviceSizes.Tablet,
+  )}
 `
 
 const Wrapper = styled.div`
@@ -107,6 +116,7 @@ const ImgWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  ${responsive({ display: 'none' }, DeviceSizes.Tablet)}
 `
 const Image = styled.img`
   height: 80%;
@@ -120,12 +130,14 @@ const InfoWrapper = styled.div`
 const Title = styled.h2`
   font-size: 72px;
   font-weight: bold;
+  ${responsive({ fontSize: '40px' }, DeviceSizes.Tablet)}
 `
 
 const Description = styled.p`
   letter-spacing: 3px;
   font-size: 30px;
   margin: 50px 0px;
+  ${responsive({ fontSize: '26px', margin: '30px 0px' }, DeviceSizes.Tablet)}
 `
 
 const Button = styled.button`

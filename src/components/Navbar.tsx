@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined'
 import SearchIcon from '@material-ui/icons/Search'
 import Badge from '@material-ui/core/Badge'
+import { DeviceSizes, responsive } from '../responsive'
 
 export const Navbar = () => {
   return (
@@ -23,7 +24,7 @@ export const Navbar = () => {
           <MenuItem>SIGN IN</MenuItem>
           <MenuItem>
             <Badge badgeContent={2} color="primary">
-              <ShoppingCartOutlinedIcon />
+              <ShoppingCartOutlinedIconStyled />
             </Badge>
           </MenuItem>
         </RightSide>
@@ -34,9 +35,11 @@ export const Navbar = () => {
 
 const Container = styled.div`
   height: 60px;
+  ${responsive({ height: '50px' })}
 `
 
 const Wrapper = styled.div`
+  height: 100%;
   padding: 10px 20px;
   display: flex;
   justify-content: space-between;
@@ -47,12 +50,14 @@ const LeftSide = styled.div`
   flex: 1;
   align-items: center;
   display: flex;
+  ${responsive({ display: 'none' }, DeviceSizes.Tablet)}
 `
 
 const Center = styled.div`
   display: flex;
   flex: 1;
   justify-content: center;
+  ${responsive({ justifyContent: 'flex-start' }, DeviceSizes.Tablet)}
 `
 
 const RightSide = styled.div`
@@ -64,12 +69,14 @@ const RightSide = styled.div`
 
 const Logo = styled.h2`
   font-weight: bold;
+  ${responsive({ fontSize: '15px' })}
 `
 
 const MenuItem = styled.div`
   font-size: 14px;
   cursor: pointer;
   margin-left: 25px;
+  ${responsive({ fontSize: '12px', marginLeft: '10px' })}
 `
 
 const Language = styled.span`
@@ -91,4 +98,8 @@ const Input = styled.input`
 const StyledSearchIcon = styled(SearchIcon)`
   color: gray;
   font-size: 16px;
+`
+
+const ShoppingCartOutlinedIconStyled = styled(ShoppingCartOutlinedIcon)`
+  ${responsive({ fontSize: '18px !important' })}
 `
