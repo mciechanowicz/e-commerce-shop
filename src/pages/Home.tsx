@@ -9,6 +9,7 @@ import { Categories } from '../components/Categories'
 import { Products } from '../components/Products'
 
 import Commerce from '../utils/commerce'
+import { Newsletter } from '../components/Newsletter'
 
 const Home = () => {
   const [products, setProducts] = useState<Product[]>([])
@@ -32,6 +33,7 @@ const Home = () => {
       <Slider />
       <Categories />
       <Products products={products} />
+      <Newsletter />
     </div>
   )
 }
