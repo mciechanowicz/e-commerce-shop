@@ -3,6 +3,7 @@ import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined'
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder'
 
 import { Product as ProductType } from '@chec/commerce.js/types/product'
+import { responsive } from '../responsive'
 
 interface ProductProps {
   product: ProductType
@@ -35,6 +36,7 @@ const IconsWrapper = styled.div`
   align-items: center;
   opacity: 0;
   transition: 0.7s;
+  ${responsive({ opacity: 1 })}
 `
 
 const Container = styled.div`
@@ -47,6 +49,7 @@ const Container = styled.div`
     background-color: rgba(75, 75, 75, 0.4);
     opacity: 1;
   }
+  ${responsive({ width: '100%' })}
 `
 
 const Image = styled.img`
@@ -71,4 +74,5 @@ const Icon = styled.div`
     transform: scale(1.1);
     opacity: 1;
   }
+  ${responsive({ width: '60px', height: '60px' })}
 `

@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { Product as ProductType } from '@chec/commerce.js/types/product'
 
 import { Product } from './Product'
+import { responsive } from '../responsive'
 
 interface ProductsProps {
   products: ProductType[]
@@ -25,4 +26,5 @@ const Container = styled.div`
   padding: 20px;
   flex-wrap: wrap;
   justify-content: space-between;
+  ${responsive({ padding: '15px 5px' })}
 `
