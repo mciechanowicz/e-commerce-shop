@@ -1,19 +1,28 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
+
+import { Product } from '@chec/commerce.js/types/product'
 
 import { Announcement } from '../components/Announcement'
 import { Navbar } from '../components/Navbar'
 import { Slider } from '../components/Slider'
 import { Categories } from '../components/Categories'
+import { Products } from '../components/Products'
 
 import Commerce from '../utils/commerce'
 
 const Home = () => {
+  const [products, setProducts] = useState<Product[]>([])
   useEffect(() => {
     getProducts()
   }, [])
 
   const getProducts = async () => {
-    const products = await Commerce.products.list()
+    try {
+      const response = await Commerce.products.list()
+      setProducts(response?.data)
+    } catch (e) {
+      console.error(e)
+    }
   }
 
   return (
@@ -22,6 +31,7 @@ const Home = () => {
       <Navbar />
       <Slider />
       <Categories />
+      <Products products={products} />
     </div>
   )
 }
