@@ -1,8 +1,8 @@
 import styled from 'styled-components'
-
 import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined'
 import SearchIcon from '@material-ui/icons/Search'
 import Badge from '@material-ui/core/Badge'
+
 import { DeviceSizes, responsive } from '../responsive'
 
 export const Navbar = () => {

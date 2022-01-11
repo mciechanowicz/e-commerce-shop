@@ -1,8 +1,7 @@
 import styled from 'styled-components'
-
 import { Product as ProductType } from '@chec/commerce.js/types/product'
 
-import { Product } from './Product'
+import { Product } from '.'
 import { responsive } from '../responsive'
 
 interface ProductsProps {

@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined'
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder'
-
 import { Product as ProductType } from '@chec/commerce.js/types/product'
+
 import { responsive } from '../responsive'
 
 interface ProductProps {

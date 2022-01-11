@@ -2,10 +2,9 @@ import { useEffect, useState } from 'react'
 
 import { Product } from '@chec/commerce.js/types/product'
 
-import { Announcement, Navbar, Slider, Categories, Products } from '../components'
-
 import Commerce from '../utils/commerce'
-import { Newsletter } from '../components/Newsletter'
+
+import { Announcement, Navbar, Slider, Categories, Products, Newsletter } from '../components'
 
 const Home = () => {
   const [products, setProducts] = useState<Product[]>([])

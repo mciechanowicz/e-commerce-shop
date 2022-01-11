@@ -1,8 +1,9 @@
 import styled from 'styled-components'
 
-import { CategoryItem } from './CategoryItem'
-import { categories } from '../data'
 import { responsive } from '../responsive'
+import { categories } from '../data'
+
+import { CategoryItem } from '.'
 
 export const Categories = () => {
   return (
