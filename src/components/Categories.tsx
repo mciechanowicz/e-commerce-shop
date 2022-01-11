@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 import { CategoryItem } from './CategoryItem'
 import { categories } from '../data'
+import { responsive } from '../responsive'
 
 export const Categories = () => {
   return (
@@ -18,4 +19,5 @@ const Container = styled.div`
   padding: 20px;
   flex-wrap: wrap;
   justify-content: space-between;
+  ${responsive({ padding: '15px 5px' })}
 `
