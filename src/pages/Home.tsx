@@ -2,11 +2,7 @@ import { useEffect, useState } from 'react'
 
 import { Product } from '@chec/commerce.js/types/product'
 
-import { Announcement } from '../components/Announcement'
-import { Navbar } from '../components/Navbar'
-import { Slider } from '../components/Slider'
-import { Categories } from '../components/Categories'
-import { Products } from '../components/Products'
+import { Announcement, Navbar, Slider, Categories, Products } from '../components'
 
 import Commerce from '../utils/commerce'
 import { Newsletter } from '../components/Newsletter'
