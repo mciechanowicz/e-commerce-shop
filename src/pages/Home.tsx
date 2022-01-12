@@ -4,7 +4,15 @@ import { Product } from '@chec/commerce.js/types/product'
 
 import Commerce from '../utils/commerce'
 
-import { Announcement, Navbar, Slider, Categories, Products, Newsletter } from '../components'
+import {
+  Announcement,
+  Navbar,
+  Slider,
+  Categories,
+  Products,
+  Newsletter,
+  Footer,
+} from '../components'
 
 const Home = () => {
   const [products, setProducts] = useState<Product[]>([])
@@ -29,6 +37,7 @@ const Home = () => {
       <Categories />
       <Products products={products} />
       <Newsletter />
+      <Footer />
     </div>
   )
 }
